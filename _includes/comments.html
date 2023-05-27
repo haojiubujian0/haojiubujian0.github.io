@@ -9,7 +9,8 @@
     repo: '{{site.gitalk.repo}}',    
     owner: '{{site.gitalk.owner}}',
     admin: ['{{site.gitalk.admin}}'],
-    distractionFreeMode: false
+    distractionFreeMode: false,
+    id: location.pathname
   });
   gitalk.render('gitalk-container');
 </script>
