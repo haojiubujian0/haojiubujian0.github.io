@@ -129,4 +129,7 @@ flex 布局 */
     height: 16px;
     background-image: url("{{site.baseurl}}/static/img/theme_dark_small.svg");
   }
+  .theme-switch-container .theme-item {
+    margin: 2px;
+  }
 }
