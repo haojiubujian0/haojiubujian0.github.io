@@ -1,0 +1,66 @@
+/* 搜索框样式 */
+/* Modified by Zeng Zhenxiang */
+.search-box .search-bar {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #eaeaea;
+  padding: 10px 0;
+  background-color: transparent;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+.search-box .search-bar img {
+  flex-grow: 0;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.search-box .search-bar #search-input {
+  flex-grow: 1;
+  max-width: 80%;
+}
+/* 搜索栏标题 */
+.search-box .search-box-title {
+  display: block;
+  padding: 10px 0;
+}
+/* 搜索结果列表样式 */
+.search-box .list-search {
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 350px;
+  overflow-y: scroll;
+  background-color: rgb(253, 253, 253);
+  border-radius: 10px;
+}
+.search-box .list-search li {
+  list-style: none;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.search-box .list-search a {
+  display: block;
+  border-bottom: 1px dashed #ccc;
+}
+.search-box .list-search .title {
+  display: inline-block;
+  word-break: break-all;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #999;
+}
+.search-box .list-search .content {
+  display: block;
+  font-size: 14px;
+  color: #5a5a5a;
+  word-break: break-all;
+  padding: 10px 0;
+}
+.search-box .list-search .hint {
+  font-size: inherit;
+  font-weight: bold;
+  color: #ff7f7f;
+}

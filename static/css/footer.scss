@@ -1,0 +1,66 @@
+---
+---
+/* 网站底部 */
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  font-size: 14px;
+}
+.footer a {
+  text-decoration: underline;
+  color: #000000;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+/* 固定在页面底部的按钮 */
+.footer-btn {
+  position: fixed;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-btn span {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  // 设置底部图标的颜色
+  background-color: #ffffff;  
+}
+/* 默认情况下，回到顶部按钮距离浏览器窗口底部负距离，即不可见 */
+.footer-btn.to-top {
+  right: 16px;
+  bottom: -50px;
+  transition: bottom 200ms ease-in-out;
+}
+/* 向上按钮显示 */
+.footer-btn.to-top.show {
+  bottom: 16px;
+}
+.icon-arrow-top {
+  mask-image: url('{{site.baseurl}}/static/img/arrow_up.svg');
+  -webkit-mask-image: url('{{site.baseurl}}/static/img/arrow_up.svg');
+}
+// 向下的箭头
+.footer-btn.to-bottom {
+  right: 16px;
+  bottom: 53px;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+.footer-btn.to-bottom.show {
+  opacity: 1;
+}
+.icon-arrow-down {
+  mask-image: url('{{site.baseurl}}/static/img/arrow_down.svg');
+  -webkit-mask-image: url('{{site.baseurl}}/static/img/arrow_down.svg');
+}

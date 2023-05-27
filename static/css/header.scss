@@ -1,0 +1,96 @@
+---
+---
+
+/* 网站头部导航栏 
+flex 布局 */
+.header {
+  padding: 20px 0;
+  padding-right: 20px;
+}
+
+/* Add by Zeng Zhenxiang */
+/* 网站顶部图标、菜单栏、主题切换按钮 */
+/* 网站顶部的flex布局 */
+.header .site-top-container {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .site-top-container .site-title {
+  box-sizing: border-box;
+  width: 20%;
+}
+.header .site-top-container .site-menus-container {
+  box-sizing: border-box;
+  width: 60%;
+}
+.header .site-top-container .theme-switch-container {
+  box-sizing: border-box;
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+/* 菜单的flex布局 */
+.site-menus-container .menus-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.site-menus-container .menus-content .menu-item {
+  flex: 0 1 auto;
+  padding: 12px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+/* 主题切换按钮 */
+.theme-switch-container {
+  position: relative;
+}
+.theme-switch-container .theme-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 8px;
+}
+.theme-item .icon {
+  display: inline-block;
+  margin-right: 5px;
+  flex-shrink: 0;
+}
+.theme-toggle {
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+.theme-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 8px;
+}
+.theme-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.theme-option:hover {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+.icon-light {
+  width: 32px;
+  height: 32px;
+  background-image: url("{{site.baseurl}}/static/img/theme_light.svg");
+}
+.icon-dark {
+  width: 32px;
+  height: 32px;
+  background-image: url("{{site.baseurl}}/static/img/theme_dark.svg");
+}

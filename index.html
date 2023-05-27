@@ -1,0 +1,107 @@
+---
+layout: page
+title: 首页
+---
+<section>
+  <div class="columns">
+    <!-- show posts, 2/3 -->
+    <div class="column two-thirds">
+      {%- for post in site.posts -%}
+        <div class="posts-container">
+          <h2 class="post-title">
+            <a href="{{ site.baseurl | append: post.url }}" class="hover-underline">{{ post.title }}</a>
+          </h2>
+
+          <div class="sec-line-container">
+            <div class="item">
+              <img src="{{site.baseurl}}/static/img/calendar.svg" alt="" />
+              <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
+            </div>
+            <div class="item">
+              <img src="{{site.baseurl}}/static/img/author.svg" alt="" />
+              <span class="post-author">{{post.author}}</span>
+            </div>
+          </div>
+          
+          <p class="post-excerpt">
+            {{ post.excerpt | strip_html | strip }}
+          </p>
+          
+          <div class="post-tags">
+            <img src="{{site.baseurl}}/static/img/tag.svg" alt="" />
+            {%- for category in post.categories -%}
+            <span class="post-tag">{{ category }}</span>
+            {%- endfor -%}
+          </div>
+        </div>
+        {%- unless forloop.last -%}
+        <div class="underline"></div>
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+
+    <!-- show sidebar, 1/3 -->
+    <div class="column one-thirds location">
+      <!-- 侧边搜索栏 -->
+      <div class="search-box">
+        <h3 class="search-box-title">全站检索</h3>
+        <div class="search-bar">
+          <img src="{{site.baseurl}}/static/img/search.svg" alt="" />
+          <input id="search-input" type="text" placeholder="请在这里输入关键词^_^"></input>
+        </div>
+        <!-- 搜索结果 -->
+        <ul class="list-search">
+          {%- for post in site.posts  %}
+          <li hidden>
+            <a href="{{site.baseurl}}{{ post.url }}">
+              <p class="title">{{ post.title }}</p>
+              <p class="content"></p>
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <!-- 侧边文章类别云 -->
+      <div class="categories-cloud">
+        <h3 class="categories-cloud-title">标签云</h3>
+        <!-- 将max_nums和min_nums设置为第一种类别的文章数 -->
+        {%- assign first = site.categories.first -%}
+        {%- assign max_nums = first[1].size -%}
+        {%- assign min_nums = max_nums -%}
+        <!-- 统计所有类别中最多的文章数以及最少的文章数 -->
+        {%- for category in site.categories offset:1 -%}
+          {% if category[1].size > max_nums %}
+            {% assign max_nums = category[1].size %}
+          {% elsif category[1].size < min_nums %}
+            {% assign min_nums = category[1].size %}
+          {% endif %}
+        {%- endfor -%}
+
+        {%- assign diff = max_nums | minus: min_nums -%}
+        {%- if diff == 0 -%} {%- assign diff = 1 -%} {%- endif -%}
+        <!-- 转换为浮点数 -->
+        {%- assign diff = diff | times: 1.0 -%} 
+
+        <!-- font-size: [a, b] -->
+        {%- assign a = 10 -%}
+        {%- assign b = 20 -%}
+        {%- assign dx = b | minus: a -%}
+        {%- for category in site.categories -%}
+          {%- assign percentage = category[1].size | minus: min | divided_by: diff -%}
+          {%- assign font_size = percentage | times: dx | plus: a -%}
+          {%- assign random_number = "50" | random -%}
+          {%- assign color = random_number | plus: 100 -%}
+          <div class="category-text">
+            <a href="{{ site.url }}/pages/categories.html/#{{ category[0] }}" style="font-size: {{ font_size }}pt; color: rgb({{color}}, {{color}}, {{color}});">
+              {{ category[0] }}
+            </a>
+            <span class="category-count" style="font-size: {{ font_size | times: 0.7}}pt; color: rgb({{color}}, {{color}}, {{color}});">{{category[1].size}}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- clear float -->
+    <div style="clear: both;"></div>
+  </div>
+</section>

@@ -1,0 +1,64 @@
+encoding: utf-8
+
+# SEO相关信息
+title: TMaize Blog
+description: TMaize的个人博客
+keywords: TMaize,Blog,Java,Html,JavaScript
+author: Zeng Zhenxiang
+footerText: 'Copyright © 2016 皖ICP备16016174号'
+
+# 这些不要动
+permalink: /posts/:year/:month/:day/:title.html
+kramdown:
+  # auto_ids 设置为 true 时，kramdown 会根据标题的文本内容自动生成唯一的 ID，并将其添加到生成的 HTML 中
+  # 一级到六级标题 (<h1> 到 <h6>)：对于每个标题元素，kramdown 会根据标题文本生成一个唯一的 ID，并将其作为该元素的 id 属性
+  # ......
+  auto_ids: true
+  input: GFM
+  syntax_highlighter: rouge
+exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock']
+
+# 域名配置
+# baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
+domainUrl: 'https://blog.tmaize.net'
+baseurl: ''
+
+# 吐个槽地址，会在chat页面中重定向到该地址
+tucaoUrl: https://support.qq.com/product/86335
+
+excerpt_separator: <!--more-->
+
+# 评论区
+gitalk:
+  owner: haojiubujian0
+  repo: comments
+  client_id: db226ef9b84b9e0b50e2
+  client_secrets: 5745982405e80d6fb2c69037cc89183f5de79443
+  admin: haojiubujian0
+
+# 菜单
+# 必填字段 title: '文本' url: '链接'
+# 可选字段 target: '_blank' 新页面打开 
+menu:
+  - title: 主页
+    url: /
+    src: /static/img/home.svg
+  - title: 归类
+    url: /pages/categories.html
+    src: /static/img/category.svg
+  - title: 关于
+    url: /pages/about.html
+    src: /static/img/about.svg
+
+# 点击页面文字冒出特效,不需要请设置为false
+extClickEffect: true
+
+# Google Adsense,不需要请设置为false
+# _includes/ext-adsense.html 里面修改为自己的配置
+extAdsense: false
+
+# 数学公式支持，比较影响加载速度,不需要请设置为false
+extMath: false
+
+# 显示访问量统计，由不蒜子提供服务
+extCount: false

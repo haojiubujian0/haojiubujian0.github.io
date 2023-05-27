@@ -1,0 +1,43 @@
+<header class="header">
+  <div class="site-top-container">
+
+    <div class="site-title">
+      <img id="site-logo" src="{{site.baseurl}}/static/img/logo_light.svg" alt="" />
+    </div>
+
+    <div class="site-menus-container">
+      <div class="menus-content">
+        <!-- 菜单项 -->
+        {%- for menu in site.menu -%}
+        {%- capture href -%}{{ site.baseurl }}{{ menu.url }}{%- endcapture -%}
+        <div class="menu-item">
+        <img src="{{site.baseurl}}{{menu.src}}" alt="" />
+        <a href="{{href}}" class="hover-underline">{{ menu.title }}</a>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <!-- 主题切换按钮 -->
+    <div class="theme-switch-container">
+      <!-- 主题切换开关 -->
+      <div class="theme-toggle theme-item" id="themeToggle" onclick="displayThemeOptions()">
+        <span class="icon icon-light" id="themeToggleIcon"></span>
+        <span id="themeToggleText">浅色主题</span>
+      </div>
+      <!-- 下拉内容 -->
+      <div class="theme-dropdown" id="themeDropdown">
+        <div class="theme-option theme-item" id="theme-option-light" onclick="changeTheme('浅色主题', 'icon-light')">
+          <span class="icon icon-light"></span>
+          浅色主题
+        </div>
+        <div class="theme-option theme-item" id="theme-option-dark" onclick="changeTheme('深色主题', 'icon-dark')">
+          <span class="icon icon-dark"></span>
+          深色主题
+        </div>
+      </div>      
+    </div>
+
+    <div style="clear: both;"></div>
+  </div>
+</header>
