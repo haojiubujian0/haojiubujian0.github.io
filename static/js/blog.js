@@ -399,7 +399,7 @@ function changeTheme(iconClass) {
 // 页面完成加载后设置网站的主题
 function updateTheme(theme) {
   // 更新浏览器缓存
-  localStorage.setItem("theme", theme ? "true" : "false");
+  localStorage.setItem("theme", theme ? "dark" : "light");
   /* document.documentElement.className 获取或设置文档根元素的类名（class name）的属性。*/
   document.documentElement.className = theme ? 'dark' : '';
   /* 

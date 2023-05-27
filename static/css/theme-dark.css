@@ -103,3 +103,11 @@ html.dark .theme-dropdown {
 html.dark .theme-item:hover {
   background-color: #a5a5a5;
 }
+
+@media screen and (max-width: 560px) {
+  /* 左侧边栏 */
+  html.dark .post-main .sidebar-head {
+    background-color: #0d1117;
+  }
+
+}
