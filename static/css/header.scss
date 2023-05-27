@@ -4,8 +4,7 @@
 /* 网站头部导航栏 
 flex 布局 */
 .header {
-  padding: 20px 0;
-  padding-right: 20px;
+  padding: 20px 10px;
 }
 
 /* Add by Zeng Zhenxiang */
@@ -52,7 +51,7 @@ flex 布局 */
   display: flex;
   align-items: center;
   font-size: 18px;
-  padding: 8px;
+  margin: 8px;
 }
 .theme-item .icon {
   display: inline-block;
@@ -62,9 +61,9 @@ flex 布局 */
 .theme-toggle {
   cursor: pointer;
 }
-.theme-toggle:hover {
+.theme-item:hover {
   background-color: #f0f0f0;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .theme-dropdown {
   display: none;
@@ -93,4 +92,38 @@ flex 布局 */
   width: 32px;
   height: 32px;
   background-image: url("{{site.baseurl}}/static/img/theme_dark.svg");
+}
+
+@media screen and (max-width: 560px) {
+  // 网站头部的字体大小
+  .header a {
+    font-size: 16px;
+  }
+  .header .theme-item span {
+    font-size: 16px;
+  }
+  // 网站的logo 
+  .header .site-title #site-logo {
+    width: 80px;
+    height: 60px;
+  }
+  // 菜单
+  .site-menus-container .menus-content .menu-item {
+    padding-right: 5px;
+  }
+  .header .menu-item img {
+    width: 18px;
+    height: 18px;
+  }
+  // 切换主题开关
+  .icon-light {
+    width: 16px;
+    height: 16px;
+    background-image: url("{{site.baseurl}}/static/img/theme_light_small.svg");
+  }
+  .icon-dark {
+    width: 16px;
+    height: 16px;
+    background-image: url("{{site.baseurl}}/static/img/theme_dark_small.svg");
+  }
 }

@@ -377,11 +377,9 @@ function displayThemeOptions() {
   var themeDropdown = document.getElementById('themeDropdown');
   themeDropdown.style.display = themeDropdown.style.display === 'none' ? 'block' : 'none';
 }
-function changeTheme(text, iconClass) {
+function changeTheme(iconClass) {
   // 主题切换开关的文本以及图标元素
-  var themeToggleText = document.getElementById('themeToggleText');
   var themeToggleIcon = document.getElementById('themeToggleIcon');
-  themeToggleText.textContent = text;
   themeToggleIcon.className = iconClass + " icon";
   // 关闭主题选项
   var themeDropdown = document.getElementById('themeDropdown');
@@ -426,8 +424,8 @@ blog.addLoadEvent(function() {
   }
   updateTheme(theme);
   // 设置主题切换开关的相应样式
-  if(theme == true) changeTheme('深色主题', 'icon-dark');
-  else changeTheme('浅色主题', 'icon-light');
+  if(theme == true) changeTheme('icon-dark');
+  else changeTheme('icon-light');
 });
 
 // 回到顶部按钮
