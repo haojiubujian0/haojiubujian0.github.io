@@ -10,7 +10,8 @@
     owner: '{{site.gitalk.owner}}',
     admin: ['{{site.gitalk.admin}}'],
     distractionFreeMode: false,
-    id: location.pathname
+    labels: ['gitalk'],
+    id: '{{page.title | truncate: 50}}'
   });
   gitalk.render('gitalk-container');
 </script>
