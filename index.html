@@ -93,7 +93,7 @@ title: 主页
           {%- assign random_number = "50" | random -%}
           {%- assign color = random_number | plus: 100 -%}
           <div class="category-text">
-            <a href="{{ site.url }}/pages/categories.html/#{{category[0]}}" class="hover-underline" style="font-size: {{ font_size }}pt; color: rgb({{color}}, {{color}}, {{color}});">
+            <a href="{{ site.baseurl }}/pages/categories.html/#{{category[0]}}" class="hover-underline" style="font-size: {{ font_size }}pt; color: rgb({{color}}, {{color}}, {{color}});">
               {{ category[0] }}
             </a>
             <span class="category-count" style="font-size: {{ font_size | times: 0.7}}pt; color: rgb({{color}}, {{color}}, {{color}});">{{category[1].size}}</span>
