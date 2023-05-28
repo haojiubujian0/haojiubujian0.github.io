@@ -8,15 +8,16 @@ title: 文章分类
     <h2>所有分类</h2>
     <div>
       {%- for category in site.categories %}
-      <a href="javascript:document.getElementById('{{ category[0] }}').scrollIntoView()">{{ category[0] }}</a>
+      <a href="#{{category[0]}}">{{ category[0] }}</a>
       {%- endfor %}
     </div>
   </div>
   {%- for category in site.categories %}
   <div class="list-post">
-    <h2 id="{{ category[0] }}">{{ category[0] }}</h2>
+    <h2 id="{{category[0]}}">{{ category[0] }}</h2>
     <ul>
       {%- for post in category[1] %}
+      <!-- {{post.url}} -->
       <li>
         <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
         <div class="title">
