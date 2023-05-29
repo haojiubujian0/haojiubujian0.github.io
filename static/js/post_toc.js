@@ -74,29 +74,36 @@ blog.addLoadEvent(function () {
 blog.addLoadEvent(function () {
   const tocBtn = document.getElementById("toc-btn");
   var toc = document.querySelector(".post-main .toc");
+  var film = document.querySelector(".post-main .film");
+  const sidebarHead = document.querySelector(".sidebar-head");
   var flag = false;
 
-  var film = document.querySelector(".post-main .film");
+  function updateTOCPos() {
+    rect = sidebarHead.getBoundingClientRect();
+    // console.log(rect.bottom);
+    toc.style.top = rect.bottom + "px";
+  }
+
+  // 优化
+  film.onclick = function () {
+    blog.removeClass(toc, "show");
+    film.style.display = "none";
+    flag = false;
+  };
   tocBtn.addEventListener("click", function () {
-    flag = flag ? false : true;  
+    flag = flag ? false : true;
     if(flag) {
+      updateTOCPos();
       blog.addClass(toc, "show");
       film.style.display = "block";
+      // 监听滚动条并实时设置目录的位置
+      window.addEventListener("scroll", updateTOCPos);
     }
     else {
       blog.removeClass(toc, "show");
       film.style.display = "none";
+      // 移除flag为true时所加入的事件
+      window.removeEventListener("scroll", updateTOCPos);
     }
   });
-
-  const sidebarHead = document.querySelector(".sidebar-head");
-  var rect;
-  blog.addEvent(window, "scroll", function () {
-    rect = sidebarHead.getBoundingClientRect();
-    // console.log(rect.bottom);
-    toc.style.top = rect.bottom + "px";
-  });
-  // 页面完成加载后, 设置初始的位置
-  rect = sidebarHead.getBoundingClientRect();
-  toc.style.top = rect.bottom + "px";
 });

@@ -43,6 +43,18 @@ flex 布局 */
   display: flex;
   align-items: center;
 }
+.menu-item a {
+  display: block;
+  padding-bottom: 5px;
+}
+.menu-item a:hover {
+  color: #00bafe;
+  border-bottom: 2px solid #007bfe;
+}
+.menu-item .active {
+  color: #00bafe;
+  border-bottom: 2px solid #007bfe;
+}
 /* 主题切换按钮 */
 .theme-switch-container {
   position: relative;

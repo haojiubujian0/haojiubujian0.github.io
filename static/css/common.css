@@ -2,10 +2,10 @@ html {
   color: #333333;
   background: #ffffff;
   scroll-behavior: smooth;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -ms-text-size-adjust: 80%;
+  -webkit-text-size-adjust: 80%;
+  -moz-text-size-adjust: 80%;
+  text-size-adjust: 80%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Cascadia Code', Consolas, Helvetica, 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
@@ -59,26 +59,33 @@ pre,
 code {
   font-family: inherit;
 }
-input:-webkit-autofill {
-  /* 自动填充的文本颜色 */
-  -webkit-text-fill-color: #333333 !important;
-  /* -webkit-text-fill-color: var(--text-color) !important; */
 
-  /* 方式1：使用内阴影覆盖自动填充的背景色 */
-  /* box-shadow: 0 0 0 1000px #ffffff inset !important; */
-
-  /* 方式2：通过延迟一个月，取消自动填充的背景色 */
-  -webkit-transition: background-color 2592000s ease-in-out 0s;
-  transition: background-color 2592000s ease-in-out 0s;
-}
+/* 滚动条样式 */
 ::-webkit-scrollbar {
   width: 5px;
-  height: 5px;
   background-color: transparent;
 }
+/* 滚动条拇指样式 */
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background-color: #999999;
+}
+::-moz-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #999999;
+}
+::-ms-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #999999;
+}
+::scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #999999;
+}
+/* 选中文本时的样式 */
+::-moz-selection {
+  background-color: #4a4a4a;
+  color: #f9f9f9;
 }
 ::selection {
   background-color: #4a4a4a;
@@ -111,8 +118,5 @@ input:-webkit-autofill {
 }
 
 @media screen and (max-width: 560px) {
-  /* .header .menu a {
-    margin: 2px 5px;
-    font-size: 15px;
-  } */
+  
 }

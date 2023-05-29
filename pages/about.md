@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 关于我
+permalink: /pages/about.html
 ---
 
 > Hello 陌生人，欢迎访问 TMaize Blog
