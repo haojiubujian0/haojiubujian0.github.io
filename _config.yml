@@ -38,6 +38,8 @@ gitalk:
   client_id: db226ef9b84b9e0b50e2
   client_secrets: 5745982405e80d6fb2c69037cc89183f5de79443
   admin: haojiubujian0
+# 百度统计
+baidu_statistics: true
 
 # 菜单
 # 必填字段 title: '文本' url: '链接'
