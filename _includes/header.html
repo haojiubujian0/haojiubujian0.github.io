@@ -1,4 +1,16 @@
 <header class="header">
+  <!-- 百度统计 -->
+  {%- if site.baidu_statistics -%}
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e67d63f8c7b694c025545319658eccd";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  {%- endif -%}
   <div class="site-top-container">
 
     <div class="site-title">
