@@ -2,15 +2,15 @@
 layout: page
 title: 主页
 ---
-<section>
+<section class="home-main">
   <div class="columns">
     <!-- show posts, 2/3 -->
     <div class="column two-thirds">
       {%- for post in site.posts -%}
         <div class="posts-container">
-          <h2 class="post-title">
+          <h3 class="post-title">
             <a href="{{ site.baseurl | append: post.url }}" class="hover-underline">{{ post.title }}</a>
-          </h2>
+          </h3>
 
           <div class="sec-line-container">
             <div class="item">
@@ -23,9 +23,9 @@ title: 主页
             </div>
           </div>
           
-          <p class="post-excerpt">
+          <span class="post-excerpt">
             {{ post.excerpt | strip_html | strip }}
-          </p>
+          </span>
           
           <div class="post-tags">
             <img src="{{site.baseurl}}/static/img/tag.svg" alt="" />

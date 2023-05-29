@@ -2,45 +2,20 @@ html {
   color: #333333;
   background: #ffffff;
   scroll-behavior: smooth;
-  -ms-text-size-adjust: 80%;
-  -webkit-text-size-adjust: 80%;
-  -moz-text-size-adjust: 80%;
-  text-size-adjust: 80%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-family: 'Cascadia Code', Consolas, Helvetica, 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
   overflow-y: overlay;
 }
-/* html[transition] 是一个 CSS 选择器，它选择具有 transition 属性的 HTML 元素。 
-   它指定了一个过渡效果，当元素的任何 CSS 属性发生变化时，都会以 500 毫秒的时间长度和缓动函数为元素应用过渡效果。*/
-html[transition] {
-  transition: all 500ms ease;
-}
 body {
   max-width: 1080px;
-  /* 使得body内容居中显示 */
-  margin: 0 auto; 
+  /* 使body内容居中显示 */
+  margin: 0 auto;
+  padding: 0px 10px;
 }
 * {
+  /* -webkit-tap-highlight-color 是一个用于设置在移动设备上触摸元素时的高亮颜色的 CSS 属性。 */
   -webkit-tap-highlight-color: transparent;
 }
-ol,
-ul {
-  list-style: none;
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-ul,
-ol,
-li,
-blockquote {
-  padding: 0;
-  margin: 0;
-}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -115,8 +90,4 @@ code {
 .hover-underline:hover:after {
   visibility: visible;
   transform: scaleX(1);
-}
-
-@media screen and (max-width: 560px) {
-  
 }

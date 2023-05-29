@@ -1,103 +1,105 @@
 // 加载所有文章数据，优先使用localStorage缓存
 function loadAllPostData(callback) {
-  if (localStorage.db && localStorage.dbVersion == blog.buildAt) {
-    callback ? callback(localStorage.db) : ''
-    return
+  // 如果缓存中的数据是最新的
+  if (localStorage.getItem("db") && localStorage.getItem("dbVersion") == blog.buildAt) {
+    callback ? callback(localStorage.getItem("db")) : '';
+    return ;
   }
-
-  localStorage.removeItem('dbVersion')
-  localStorage.removeItem('db')
-
+  
+  localStorage.removeItem('dbVersion');
+  localStorage.removeItem('db');
   blog.ajax(
     {
       timeout: 20000,
       url: blog.baseurl + '/static/xml/search.xml?t=' + blog.buildAt
     },
     function (data) {
-      localStorage.db = data
-      localStorage.dbVersion = blog.buildAt
-      callback ? callback(data) : ''
+      localStorage.setItem("db", data);
+      localStorage.setItem("dbVersion", blog.buildAt);
+      callback ? callback(data) : '';
     },
     function () {
-      console.error('全文检索数据加载失败...')
+      console.error('全文检索数据加载失败...');
       callback ? callback(null) : ''
     }
-  )
+  );
 }
 
 // 搜索功能
 blog.addLoadEvent(function () {
-  // 标题等信息
-  let titles = []
-  // 正文内容
-  let contents = []
-  // 低版本chrome，输入拼音的过程中也会触发input事件
-  let inputLock = false
   // 输入框
-  let input = document.getElementById('search-input')
-
-  // 非搜索页面
+  let input = document.getElementById('search-input');
+  // 没有搜索栏
   if (!input) {
     return
   }
+  // 标题等信息
+  let titles = [];
+  // 正文内容
+  let contents = [];
+  // 低版本chrome，输入拼音的过程中也会触发input事件
+  let inputLock = false;
 
   loadAllPostData(function (data) {
-    titles = parseTitle()
-    contents = parseContent(data)
-    search(input.value)
-  })
+    titles = parseTitle();
+    contents = parseContent(data);
+    search(input.value);
+  });
 
+  // 获取所有文章的标题，返回的arr数组中的每个元素都是一个文章标题
   function parseTitle() {
-    let arr = []
-    let doms = document.querySelectorAll('.list-search .title')
+    let arr = [];
+    let doms = document.querySelectorAll('.list-search .title');
     for (let i = 0; i < doms.length; i++) {
-      arr.push(doms[i].innerHTML)
+      arr.push(doms[i].innerHTML);
     }
-    return arr
+    return arr;
   }
 
+  // 获取所有文章的内容，返回的数组arr中的每一个元素都是一个文章的内容
   function parseContent(data) {
-    let arr = []
-    let root = document.createElement('div')
-    root.innerHTML = data
-    let doms = root.querySelectorAll('li')
+    let arr = [];
+    let root = document.createElement('div');
+    root.innerHTML = data;
+    let doms = root.querySelectorAll('li');
     for (let i = 0; i < doms.length; i++) {
-      arr.push(doms[i].innerHTML)
+      arr.push(doms[i].innerHTML);
     }
-    return arr
+    return arr;
   }
 
+  // 根据搜索框中的内容进行搜索
   function search(key) {
     // <>& 替换
-    key = blog.trim(key)
-    key = key.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&/g, '&amp;')
+    key = blog.trim(key);
+    key = key.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&/g, '&amp;');
 
-    let doms = document.querySelectorAll('.list-search li')
-    let h1 = '<span class="hint">'
-    let h2 = '</span>'
+    // doms 为搜索栏中所有隐藏的li元素，每个li元素都对应一个文章
+    let doms = document.querySelectorAll('.list-search li');
+    let h1 = '<span class="hint">';
+    let h2 = '</span>';
     for (let i = 0; i < doms.length; i++) {
-      let title = titles[i]
-      let content = contents[i]
-      let dom_li = doms[i]
-      let dom_title = dom_li.querySelector('.title')
-      let dom_content = dom_li.querySelector('.content')
+      let title = titles[i];
+      let content = contents[i];
+      let dom_li = doms[i];
+      let dom_title = dom_li.querySelector('.title');
+      let dom_content = dom_li.querySelector('.content');
 
-      dom_title.innerHTML = title
-      dom_content.innerHTML = ''
+      dom_content.innerHTML = '';
 
       // 空字符隐藏
       if (key == '') {
-        dom_li.setAttribute('hidden', true)
+        dom_li.setAttribute('hidden', true);
         continue
       }
-      let hide = true
-      let r1 = new RegExp(blog.encodeRegChar(key), 'gi')
-      let r2 = new RegExp(blog.encodeRegChar(key), 'i')
+      let hide = true;
+      let r1 = new RegExp(blog.encodeRegChar(key), 'gi');
+      let r2 = new RegExp(blog.encodeRegChar(key), 'i');
 
       // 标题全局替换
       if (r1.test(title)) {
-        hide = false
-        dom_title.innerHTML = title.replace(r1, h1 + key + h2)
+        hide = false;
+        dom_title.innerHTML = title.replace(r1, h1 + key + h2);
       }
       // 内容先找到第一个，然后确定100个字符，再对这100个字符做全局替换
       let cResult = r2.exec(content)

@@ -1,6 +1,9 @@
-/* Modified by Zeng Zhenxiang */
 .post-main {
   position: relative;
+}
+.post-main * {
+  padding: 0;
+  margin: 0;
 }
 /* 薄膜 */
 .post-main .film {
@@ -159,7 +162,6 @@
 .post-main .columns .column {
   display: block;
   float: left;
-  padding: 0 10px;
   overflow-x: scroll;
 }
 .post-main .columns .two-thirds {
