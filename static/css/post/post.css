@@ -64,6 +64,11 @@
   font-weight: bold;
 }
 
+.post-main .post-content pre,
+.post-main .post-content code {
+  font-family: inherit;
+}
+
 .post-main .post-content blockquote {
   border-left: 3px solid #333333;
   background-color: #f7f7f7;

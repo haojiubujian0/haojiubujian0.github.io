@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-{% include head.html -%}
-<body>
-{% include header.html -%}
-{{ content }}
-{% include footer.html -%}
-{% include script.html -%}
-</body>
+  <head>
+  {%- include head.html -%}
+  <!-- 对特定的页面引入专用的样式表和脚本 -->
+  {%- if page.title == "主页" -%}
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/page/index.css" />
+  <script type="text/javascript" src="{{site.baseurl}}/static/js/page/search.js"></script>
+  {%- endif -%}
+  {%- if page.title == "文章分类" -%}
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/page/categories.css" />
+  {%- endif -%}
+  </head>
+  <body>
+  {% include header.html -%}
+  {{ content }}
+  {% include footer.html -%}
+  </body>
 </html>
