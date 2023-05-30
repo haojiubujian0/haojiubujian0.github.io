@@ -16,11 +16,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 /* 滚动条样式 */
 ::-webkit-scrollbar {
   width: 5px;

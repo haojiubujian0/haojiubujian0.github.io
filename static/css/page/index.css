@@ -5,6 +5,10 @@
 .columns > * {
   box-sizing: border-box;
 }
+.home-main a {
+  color: inherit;
+  text-decoration: none;
+}
 .column {
   float: left;
 }

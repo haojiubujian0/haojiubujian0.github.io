@@ -6,7 +6,10 @@ flex 布局 */
 .header {
   padding: 20px 0px;
 }
-
+.header a {
+  color: inherit;
+  text-decoration: none;
+}
 /* Add by Zeng Zhenxiang */
 /* 网站顶部图标、菜单栏、主题切换按钮 */
 /* 网站顶部的flex布局 */

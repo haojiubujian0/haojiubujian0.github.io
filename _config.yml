@@ -8,9 +8,9 @@ author: Zeng Zhenxiang
 footerText: >
   ©2023 Zeng Zhenxiang. All rights reserved. <br/>
   Powered by Jekyll | Hosted by GitHub <br/>
-  Theme by <a href="https://github.com/haojiubujian0/haojiubujian0.github.io">Zeng Zhenxiang</a>.
+  Theme by <a href="https://github.com/haojiubujian0/haojiubujian0.github.io">Zeng Zhenxiang</a>. <br />
+  Expressing my gratitude to <a href="https://github.com/TMaize/tmaize-blog">TMaize</a> for his Theme.
 
-# 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
 kramdown:
   # auto_ids 设置为 true 时，kramdown 会根据标题的文本内容自动生成唯一的 ID，并将其添加到生成的 HTML 中
@@ -19,16 +19,16 @@ kramdown:
   auto_ids: true
   input: GFM
   syntax_highlighter: rouge
+
 exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock']
 
 # 域名配置
 # baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
-domainUrl: 'https://blog.tmaize.net'
+domainUrl: 'https://www.zengzhenxiang.top/'
 baseurl: ''
 
-# 吐个槽地址，会在chat页面中重定向到该地址
-tucaoUrl: https://support.qq.com/product/86335
-
+# 文章摘要的分界处
+# 用于博客文章
 excerpt_separator: <!--more-->
 
 # 评论区
@@ -55,8 +55,8 @@ menu:
     url: /pages/about.html
     src: /static/img/about.svg
 
-# 点击页面文字冒出特效,不需要请设置为false
+# 点击页面文字冒出特效
 extClickEffect: true
 
-# 数学公式支持，比较影响加载速度,不需要请设置为false
+# 数学公式支持
 extMath: false

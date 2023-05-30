@@ -2,8 +2,21 @@
   margin: 0px;
   padding: 0px;
 }
+.categories-main a {
+  color: inherit;
+  text-decoration: none;
+}
+.categories-main {
+  font-size: 18px;
+}
+.list-category {
+  font-size: 1em;
+}
+.list-post {
+  font-size: 1em;
+}
 .list-category h2 {
-  font-size: 15px;
+  font-size: 1em;
   font-weight: bold;
   padding: 12px 0;
 }
@@ -13,12 +26,12 @@
 .list-category div a {
   margin: 4px 6px;
   white-space: nowrap;
-  font-size: 15px;
+  font-size: 0.9em;
   display: inline-block;
   border-bottom: 1px solid #333333;
 }
 .list-post > h2 {
-  font-size: 15px;
+  font-size: 1em;
   font-weight: bold;
   padding: 12px 0;
 }
@@ -31,9 +44,10 @@
   align-items: center;
   padding: 8px 0;
 }
+
 .list-post li .date {
   color: #666666;
-  font-size: 14px;
+  font-size: 0.9em;
   flex-shrink: 0;
   margin-right: 10px;
 }
@@ -46,7 +60,7 @@
   text-overflow: ellipsis;
 }
 .list-post li .title a {
-  font-size: 15px;
+  font-size: 0.9em;
 }
 .list-post li .categories {
   flex-shrink: 0;
@@ -54,7 +68,7 @@
   margin-left: 10px;
 }
 .list-post li .categories a {
-  font-size: 12px;
+  font-size: 0.8em;
   color: #666666;
   margin-left: 8px;
 }
