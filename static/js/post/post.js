@@ -89,6 +89,8 @@ blog.addLoadEvent(function () {
     blog.removeClass(toc, "show");
     film.style.display = "none";
     flag = false;
+    // 移除flag为true时所加入的事件
+    window.removeEventListener("scroll", updateTOCPos);
   };
   tocBtn.addEventListener("click", function () {
     flag = flag ? false : true;
