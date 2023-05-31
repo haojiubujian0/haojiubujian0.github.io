@@ -74,25 +74,23 @@
 }
 
 .post-main .post-content blockquote {
-  border-left: 3px solid #333333;
-  background-color: #f7f7f7;
+  border-left: 3px solid #eeeeee;
   padding: 9px 9px 9px 15px;
 }
 
 .post-main .post-content a {
-  color: #000000;
   margin: 0 2px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #eeeeee;
 }
 .post-main .post-content strong,
 .post-main .post-content b {
-  color: #000000;
+  color: inherit;
 }
 .post-main .post-content ul {
-  margin-left: 16px;
+  margin-left: 25px;
 }
 .post-main .post-content ol {
-  margin-left: 23px;
+  margin-left: 32px;
 }
 .post-main .post-content ul > li {
   list-style: disc;
@@ -176,6 +174,7 @@
 .post-main .columns .two-thirds {
   box-sizing: border-box;
   width: 75%;
+  padding-right: 20px;
 }
 .post-main .columns .one-thirds {
   box-sizing: border-box;
@@ -226,6 +225,7 @@
   }
   .post-main .columns .two-thirds {
     width: 100%;
+    padding-right: 0px;
   }
   .post-main .columns .one-thirds {
     width: 250px;
