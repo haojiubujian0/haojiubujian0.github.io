@@ -181,7 +181,7 @@
 .categories-cloud-title {
   font-size: 1.45rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 560px) {
   .column {
     float: none;
   }

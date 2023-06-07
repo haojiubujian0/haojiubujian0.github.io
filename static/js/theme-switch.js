@@ -20,9 +20,9 @@ function changeTheme(iconClass) {
   updateTheme(theme);
 
   // 更新网站主页的logo
-  const site_logo = document.getElementById("site-logo");
-  if(theme) { site_logo.src = blog.baseurl + "/static/img/Luffy_dark.svg"; }
-  else { site_logo.src = blog.baseurl + "/static/img/Luffy_light.svg"; }
+  // const site_logo = document.getElementById("site-logo");
+  // if(theme) { site_logo.src = blog.baseurl + "/static/img/Luffy_dark.svg"; }
+  // else { site_logo.src = blog.baseurl + "/static/img/Luffy_light.svg"; }
 }
 // 页面完成加载后设置网站的主题
 function updateTheme(theme) {
