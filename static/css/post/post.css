@@ -1,5 +1,6 @@
 .post-main {
   position: relative;
+  padding-bottom: 100px;
 }
 .post-main * {
   padding: 0;
@@ -23,141 +24,31 @@
 
 /* 标题 */
 .post-main .post-title {
-  font-size: 22px;
+  font-size: 2.4rem;
+  margin: 1.5rem 0;
+  line-height: 1.4;
   font-weight: bold;
+  text-align: center;
+  color: #590009;
+}
+html.dark .post-main .post-title {
+  color: #ffffff;
+}
+.post-main .post-title::after {
+  content: '';
+  display: block;
+  margin: 0 auto 0;
+  width: 100px;
+  height: 2px;
+  border-bottom: 2px solid #f22f27;
 }
 /* 子标题 */
 .post-main .post-subtitle {
-  font-size: 14px;
-  color: #999999;
-}
-/* 文章内容 */
-.post-main .post-content > * {
-  margin: 18px 0;
-}
-.post-main .post-content > iframe {
-  margin: 0;
-  width: 100%;
-}
-
-.post-main .post-content h1 {
-  font-weight: bold;
-  font-size: 19px;
-  position: relative;
-  cursor: pointer;
-}
-.post-main .post-content h2 {
-  font-weight: bold;
-  font-size: 17px;
-  position: relative;
-  cursor: pointer;
-}
-.post-main .post-content h1:hover {
-  color: #0069c2;
-}
-.post-main .post-content h1:hover:before {
-  content: '#';
-  top: 0;
-  padding-right: 6px;
-}
-.post-main .post-content h3,
-.post-main .post-content h4,
-.post-main .post-content h5,
-.post-main .post-content h6 {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.post-main .post-content pre,
-.post-main .post-content code {
-  font-family: inherit;
-}
-
-.post-main .post-content blockquote {
-  border-left: 3px solid #eeeeee;
-  padding: 9px 9px 9px 15px;
-}
-
-.post-main .post-content a {
-  margin: 0 2px;
-  border-bottom: 1px solid #eeeeee;
-}
-.post-main .post-content strong,
-.post-main .post-content b {
-  color: inherit;
-}
-.post-main .post-content ul {
-  margin-left: 25px;
-}
-.post-main .post-content ol {
-  margin-left: 32px;
-}
-.post-main .post-content ul > li {
-  list-style: disc;
-}
-.post-main .post-content ol > li {
-  list-style: decimal;
-}
-.post-main .post-content li > *{
-  margin: 6px 0;
-}
-.post-main .post-content img {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
-  height: auto;
-  box-shadow: 0 0 5px #e0e0e0;
-}
-.post-main .post-content pre {
-  font-size: 0;
-  padding: 10px;
-  overflow: auto;
-  border-radius: 2px;
-  max-height: 610px;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  line-height: 1.6;
-}
-.post-main .post-content code {
-  font-size: 13px;
-  background-color: #eeeeee;
-  word-break: break-all;
-  padding: 3px 5px;
-  margin: 0 4px;
-  border-radius: 5px;
-  color: #4d4d4c;
-}
-.post-main .post-content pre code {
-  font-size: 13px;
-  background-color: transparent !important;
-  word-break: keep-all;
-  padding: 0;
-  margin: 0;
-  border-radius: unset;
-  color: inherit;
-}
-.post-main .post-content hr {
-  border: none;
-  height: 3px;
-  background-color: #eeeeee;
-}
-.post-main .post-content table {
-  min-width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  border: 1px solid #dddddd;
-}
-.post-main .post-content tr {
-  border-bottom: 1px solid #dddddd;
-}
-.post-main .post-content th {
-  font-weight: bold;
-}
-.post-main .post-content th,
-.post-main .post-content td {
-  padding: 5px 10px;
-  text-align: left;
+  font-size: 1rem;
+  color: #727272;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4rem;
 }
 
 /* Add by Zeng Zhenxiang */
@@ -174,7 +65,6 @@
 .post-main .columns .two-thirds {
   box-sizing: border-box;
   width: 75%;
-  padding-right: 20px;
 }
 .post-main .columns .one-thirds {
   box-sizing: border-box;
@@ -186,9 +76,16 @@
   position: sticky;
   top: 0;
 }
+.toc-container {
+  float: right;
+  width: 80%;
+  max-width: 250px;
+}
 .toc .toc-title {
   display: block;
   margin: 16px 0;
+  font-size: 1.3rem;
+  font-weight: normal;
 }
 .toc-list {
   list-style: none;
@@ -197,7 +94,6 @@
 }
 .toc-list .toc-item {
   box-sizing: border-box;
-
 }
 .toc-list .toc-item .toc-link {
   display: block;
@@ -209,8 +105,8 @@
   color: #0080ff;
 }
 .toc-list .toc-item .toc-link.selected {
-  background-color: #0085f230;
-  border-left: 2px solid #0069c2;
+  background-color: #ff2a5130;
+  border-left: 2px solid #d30038;
 }
 
 /* 用于小屏幕的左侧边栏 */
@@ -218,7 +114,7 @@
   display: none;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 450px) {
   /* Add by Zeng Zhenxiang */
   .post-main .columns .column {
     float: none;
@@ -242,8 +138,12 @@
     z-index: 2;
     padding-left: 10px;
   }
+  .toc-container {
+    float: none;
+    max-width: 250px;
+  }
   .post-main .toc.show {
-    left: 0px;
+    left: 20px;
   }
   .toc .toc-title {
     margin: 0px;

@@ -42,21 +42,20 @@ flex 布局 */
 .site-menus-container .menus-content .menu-item {
   flex: 0 1 auto;
   padding: 12px;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
+  font-size: 1.45rem;
 }
 .menu-item a {
   display: block;
-  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
 }
 .menu-item a:hover {
-  color: #00bafe;
-  border-bottom: 2px solid #007bfe;
+  color: #981d1d;
+  border-bottom: 3px solid #f73d3d;
 }
 .menu-item .active {
-  color: #00bafe;
-  border-bottom: 2px solid #007bfe;
+  color: #981d1d;
+  border-bottom: 3px solid #f73d3d;
 }
 /* 主题切换按钮 */
 .theme-switch-container {
@@ -65,7 +64,7 @@ flex 布局 */
 .theme-switch-container .theme-item {
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 1.45rem;
   margin: 5px;
   padding: 2px;
 }
@@ -112,13 +111,6 @@ flex 布局 */
 }
 
 @media screen and (max-width: 560px) {
-  // 网站头部的字体大小
-  .header a {
-    font-size: 16px;
-  }
-  .header .theme-item span {
-    font-size: 16px;
-  }
   // 网站的logo 
   .header .site-title #site-logo {
     width: 80px;

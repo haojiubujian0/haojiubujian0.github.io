@@ -1,0 +1,164 @@
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  position: relative;
+  /* 相对于根元素字体大小的1倍 */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.post-content h1 {
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  border-bottom: 1px solid #e66762;
+}
+.post-content h1::before {
+  content: '# ';
+  color: #cc1616;
+  font-weight: normal;
+}
+.post-content h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  font-size: 1.75rem;
+  line-height: 1.225;
+  padding-left: 9px;
+  border-left: 5px solid #f22f27;
+}
+.post-content h3 {
+  font-size: 1.5rem;
+}
+.post-content h4 {
+  font-size: 1.25rem;
+}
+.post-content h5 {
+  font-size: 1rem;
+}
+.post-content h6 {
+  font-size: 1rem;
+  color: #777;
+}
+.post-content h1 tt,
+.post-content h1 code {
+    font-size: inherit;
+}
+.post-content h2 tt,
+.post-content h2 code {
+    font-size: inherit;
+}
+.post-content h3 tt,
+.post-content h3 code {
+    font-size: inherit;
+}
+.post-content h4 tt,
+.post-content h4 code {
+    font-size: inherit;
+}
+.post-content h5 tt,
+.post-content h5 code {
+    font-size: inherit;
+}
+.post-content h6 tt,
+.post-content h6 code {
+    font-size: inherit;
+}
+
+.post-content p,
+.post-content blockquote,
+.post-content ul,
+.post-content ol,
+.post-content dl,
+.post-content table{
+    margin: 0.8rem 0;
+}
+.post-content li>ol,
+.post-content li>ul {
+    margin: 0;
+}
+.post-content ul,
+.post-content ol {
+  padding-left: 30px;
+}
+
+.post-content table {
+  min-width: 70%;
+  border-collapse:collapse;
+  margin: 0 auto;
+  word-break: initial;
+}
+.post-content table thead {
+  margin: 5px 0;
+  border-top: 2px solid #000000;
+  border-bottom: 0.75px solid #000000;
+}
+.post-content table tbody {
+  border-bottom: 2px solid #000000;
+}
+html.dark .post-content table thead {
+  border-top: 2px solid #ffffff;
+  border-bottom: 0.75px solid #ffffff;
+}
+html.dark .post-content table tbody {
+  border-bottom: 2px solid #ffffff;
+}
+.post-content table th {
+  border: none;
+  margin: 0;
+  padding: 6px 13px;
+}
+.post-content table td {
+  border: none;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+.post-content a {
+  border-bottom: 1px solid blue;
+  color: blue;
+  text-decoration: none;
+}
+.post-content a:hover {
+  border-bottom: 2px solid #f22f27;
+  color: #f22f27;
+}
+
+.post-content hr {
+  height: 2px;
+  padding: 0;
+  margin: 25px auto;
+  background-color: #cc1616;
+  border: 0 none;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+
+.post-content blockquote {
+  border-left: 4px solid #db7e7b;
+  padding: 0 15px;
+  color: #777777;
+}
+.post-content blockquote blockquote {
+  padding-right: 0;
+}
+
+.post-content img {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+  height: auto;
+  box-shadow: 0 0 5px #e0e0e0;
+  border-radius: 4px;
+}
+.post-content iframe {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  border-radius: 4px;
+}

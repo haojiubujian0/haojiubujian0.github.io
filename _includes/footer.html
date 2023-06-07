@@ -11,4 +11,21 @@
     <span class="icon icon-arrow-top"></span>
   </div>
 
+  <!-- 单击效果 -->
+  {%- if site.extClickEffect %}
+  <script>
+  (function(){
+    var textArr = ['90后', '努力', '逗比', '选择恐惧', '爱国', '射手', '自由', '愤青', 'IT', '睡懒觉'];
+    window.blog.initClickEffect(textArr);
+  })()
+  </script>
+  {% endif %}
+  <!-- 是否支持数学公式 -->
+  {%- if page.layout=="post" -%}
+    {%- if site.extMath -%}
+      {% include ext-mathjax.html %}
+    {% elsif page.extMath %}
+      {% include ext-mathjax.html %}
+    {% endif %}
+  {% endif %}
 </footer>
