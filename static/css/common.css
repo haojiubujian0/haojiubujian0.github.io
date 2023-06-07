@@ -76,12 +76,12 @@ body {
 
 @media screen and (max-width: 560px) {
   html {
-    font-size: 14px;
+    font-size: 14.5px;
   }
 }
 
 @media screen and (max-width: 380px) {
   html {
-    font-size: 12px;
+    font-size: 12.5px;
   }
 }
