@@ -10,9 +10,9 @@
   margin-bottom: 1rem;
   font-weight: bold;
   line-height: 1.4;
-  cursor: pointer;
 }
 .markdown h1 {
+  cursor: pointer;
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
   font-size: 2.2rem;
