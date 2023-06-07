@@ -1,0 +1,7 @@
+html.dark .markdown table thead {
+  border-top: 2px solid #ffffff;
+  border-bottom: 0.75px solid #ffffff;
+}
+html.dark .markdown table tbody {
+  border-bottom: 2px solid #ffffff;
+}

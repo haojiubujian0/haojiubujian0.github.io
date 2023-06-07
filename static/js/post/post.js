@@ -1,7 +1,7 @@
 // 文章目录生成
 blog.addLoadEvent(function () {
   // 查找博客文章中的所有一级，并设置目录项内容
-  const arr = document.querySelectorAll('.post-content h1');
+  const arr = document.querySelectorAll('.markdown h1');
   const ul = document.querySelector(".toc-list");
   const links = [];  // 存储所有的列表项中的a标签
   var li, a;
@@ -114,7 +114,7 @@ blog.addLoadEvent(function () {
 // 标题定位
 blog.addLoadEvent(function () {
   // 查找博客文章中的所有一级和二级标题
-  const list = document.querySelectorAll('.post-content h1');
+  const list = document.querySelectorAll('.markdown h1');
 
   for (var i = 0; i < list.length; i++) {
     blog.addEvent(list[i], 'click', function (event) {
