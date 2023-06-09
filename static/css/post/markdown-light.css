@@ -150,6 +150,9 @@
 .markdown code {
   overflow-x: auto;
 }
+.markdown pre {
+  padding-left: 10px;
+}
 .markdown img {
   display: block;
   max-width: 80%;
