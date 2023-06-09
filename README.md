@@ -1,9 +1,7 @@
 # 简介
-![](https://img.shields.io/badge/license-MIT-green)
+![](https://img.shields.io/badge/license-MIT-green)![](https://img.shields.io/badge/jekyll-theme-brightgreen)
 
-![](https://img.shields.io/badge/jekyll-theme-brightgreen)
-
-这是一款==简洁==、==醒目==的Jekyll主题。
+这是一款**简洁**、**醒目**的Jekyll主题。
 
 主题**在线预览**☞[主题预览](https://www.zengzhenxiang.top/posts/2023/05/31/%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88.html)   
 
@@ -28,7 +26,7 @@
 
 1. 将项目克隆至本地，请在本地将项目根目录下的CNAME文件删除（CNAME文件用于域名解析）。
 
-2. 在你的github账户下新建一个仓库，仓库命名的格式为：==username.github.io==，其中username是你在github上的用户名。如果仓库名不是按照这样的格式，那么最终网站将无法工作。下面是一个正确的示例：
+2. 在你的github账户下新建一个仓库，仓库命名的格式为：**username.github.io**，其中username是你在github上的用户名。如果仓库名不是按照这样的格式，那么最终网站将无法工作。下面是一个正确的示例：
 
    ![网站主页-暗色模式](./images/repo_demo.png)
 
@@ -51,6 +49,6 @@
 **基本使用**
 
 - 清空_posts目录下关于我的文章，在该目录下写入你自己的文章，注意文章的命名格式为：
-  ==yyyy-MM-dd-文章标题.md== 。
+  **yyyy-MM-dd-文章标题.md** 。
 
 - 文章的资源请放在posts目录下（不是必须的）。
