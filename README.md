@@ -1,5 +1,5 @@
 # 简介
-![](https://img.shields.io/badge/license-MIT-green)![](https://img.shields.io/badge/jekyll-theme-brightgreen)
+![](https://img.shields.io/badge/license-MIT-green) ![](https://img.shields.io/badge/jekyll-theme-brightgreen)
 
 这是一款**简洁**、**醒目**的Jekyll主题。
 
