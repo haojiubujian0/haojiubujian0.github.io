@@ -32,7 +32,7 @@
 
 3. 先前克隆的本项目上传至第2个步骤中新建的空仓库。
 
-4. 到这一步就完成了，接下来你可以通过**https://username.github.io**来访问你的站点，这里username是你在github上的用户名。
+4. 到这一步就完成了，接下来你可以通过 **https://username.github.io** 来访问你的站点，这里username是你在github上的用户名。
 
 **关于GitHub Pages**
 
