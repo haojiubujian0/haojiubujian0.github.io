@@ -28,7 +28,7 @@
 
 2. 在你的github账户下新建一个仓库，仓库命名的格式为：**username.github.io**，其中username是你在github上的用户名。如果仓库名不是按照这样的格式，那么最终网站将无法工作。下面是一个正确的示例：
 
-   ![网站主页-暗色模式](./images/repo_demo.png)
+   ![仓库名举例](./images/repo_demo.png)
 
 3. 先前克隆的本项目上传至第2个步骤中新建的空仓库。
 
